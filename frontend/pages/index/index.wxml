@@ -1,0 +1,19 @@
+<!--index.wxml-->
+<view class="container">
+  <text class="title">{{message}}</text>
+
+  <view class="input-group" wx:if="{{weatherInfo}}">
+    <text>城市: {{weatherInfo.city}}</text>
+    <text>温度: {{weatherInfo.temperature}}°C</text>
+    <text>天气: {{weatherInfo.condition}}</text>
+    <text class="small">数据来源: {{weatherInfo.source}}</text>
+  </view>
+
+  <input placeholder="输入城市名" bindinput="onCityInput" value="{{inputCity}}" />
+  <button 
+    type="primary" 
+    bindtap="onRefresh" 
+    style="background-color: #07c160; color: white; margin-top: 20px; padding: 10px 20px; border-radius: 5px; width: 80%; display: block; text-align: center;">
+    刷新数据
+  </button>
+</view>

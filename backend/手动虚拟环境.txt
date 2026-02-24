@@ -1,0 +1,17 @@
+#1.创建
+python -m venv .venv
+#2.激活
+.\.venv\Scripts\Activate.ps1
+或者.venv\Scripts\activate
+#2.5 可忽略， 安装依赖  pip install fastapi uvicorn
+#3. vscode中指定解释器
+Ctrl + Shift + P
+Python: Select Interpreter
+看右下角显示
+
+#最后  退出虚拟环境
+deactivate
+
+-----------------------
+FastApi运行服务
+uvicorn main:app --reload
